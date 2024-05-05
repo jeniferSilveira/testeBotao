@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        body{
+            background-color: rgb(48, 92, 62);
+
+        }
+
+        .painel{
+            margin: auto;
+            background-color: rgb(10, 12, 11);
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:aliceblue
+        }
+        #sim{
+            height: 50px;
+            width: 70px;
+            background-color: blueviolet;
+            border:2px solid white;
+            border-radius: 10px;
+            color: azure;
+            margin-left: -80px;
+
+                }
+
+        #nao{
+            position: absolute;
+            height: 50px;
+            width: 70px;
+            background-color: blueviolet;
+            border:2px solid white;
+            border-radius: 10px;
+            color: azure;
+            margin-left:10px;
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="painel">
+       
+        <img src="https://pa1.aminoapps.com/7660/be6ed87c4a7d5d8670295780597e8d6e20a631f3r1-268-268_hq.gif" alt="">
+        <h1> Você quer fazer a janta hoje? </h1>
+       
+
+        
+
+        <a href="https://i.makeagif.com/media/7-18-2023/XoOn9a.gif"><button id="sim"> Sim! </button></a>
+       
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+
+    </div>
+      
+    <script>
+
+        function fuja(){
+            let botaoNao = document.getElementById("nao")
+
+            let larguraJanela = window.innerWidth
+            let alturaJanela = window.innerHeight
+
+            let maxX = larguraJanela - botaoNao.offsetWidth;
+            let maxY = alturaJanela - botaoNao.offsetHeight;
+
+            let aleatorioX = Math.floor(Math.random() * maxX);
+            let aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+
+        }
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
